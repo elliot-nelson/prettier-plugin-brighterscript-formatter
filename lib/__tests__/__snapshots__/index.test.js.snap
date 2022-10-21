@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`inferred parser automatically formats BrightScript 1`] = `
+"
+function add(x, y)
+    return x + y
+end function
+"
+`;
+
+exports[`inferred parser automatically formats BrighterScript 1`] = `
+"
+function add(x, y)
+    return x + y
+end function
+"
+`;

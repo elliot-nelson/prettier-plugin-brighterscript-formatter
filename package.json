@@ -1,0 +1,36 @@
+{
+  "name": "prettier-plugin-brighterscript-formatter",
+  "version": "1.0.0",
+  "description": "Prettier plugin for formatting BrightScript and BrighterScript files.",
+  "keywords": [
+    "plugin",
+    "prettier",
+    "brightscript",
+    "brighterscript"
+  ],
+  "repository": "github:elliot-nelson/prettier-plugin-brighterscript-formatter",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*.js",
+    "!lib/__tests__/**"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "brighterscript-formatter": "1.6.18"
+  },
+  "devDependencies": {
+    "jest": "29.2.1",
+    "prettier": "2.7.1"
+  },
+  "peerDependencies": {
+    "prettier": ">= 1.16.0"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  }
+}
