@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-terraform-formatter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Prettier plugin for formatting Terraform files using terraform fmt.",
   "keywords": [
     "plugin",
