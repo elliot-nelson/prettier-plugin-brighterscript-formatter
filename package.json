@@ -1,12 +1,11 @@
 {
   "name": "prettier-plugin-terraform-formatter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Prettier plugin for formatting Terraform files using terraform fmt.",
   "keywords": [
     "plugin",
     "prettier",
-    "brightscript",
-    "brighterscript"
+    "terraform"
   ],
   "repository": "github:elliot-nelson/prettier-plugin-terraform-formatter",
   "license": "MIT",
@@ -17,9 +16,6 @@
   ],
   "scripts": {
     "test": "jest"
-  },
-  "dependencies": {
-    "brighterscript-formatter": "1.6.18"
   },
   "devDependencies": {
     "jest": "29.2.1",
