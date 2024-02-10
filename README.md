@@ -1,31 +1,36 @@
-# prettier-plugin-terraform-formatter
+# prettier-plugin-brighterscript-formatter
 
-A [Prettier] plugin that formats Terraform files using the [terraform fmt] command.
+A [Prettier] plugin that formats BrightScript and BrighterScript files using the [brighterscript-formatter] package.
 
 [prettier]: https://github.com/prettier/prettier
-[terraform fmt]: https://developer.hashicorp.com/terraform/cli/commands/fmt
+[brighterscript-formatter]: https://github.com/rokucommunity/brighterscript-formatter
 
 ## Installation
 
 ```console
-npm i -D prettier prettier-plugin-terraform-formatter
+npm i -D prettier prettier-plugin-brighterscript-formatter
 ```
-
-Note that the Terraform tool itself is _not installed_ by this tool -- it will attempt to shell out to your local Terraform installation each time it decides to format a file. You can install Terraform from the official docs, or use a version manager like [tfenv](https://github.com/tfutils/tfenv) or [tfswitch](https://github.com/warrensbox/terraform-switcher).
-
-If the formatter can't find or can't execute your local Terraform, the formatter will ignore tf files silently. You can adjust this behavior using the Options below.
-
 
 ## Options
 
-### terraformStrictError
+In this plugin, options for the BrighterScript formatter are prefixed with `bsfmt`, followed by the relevant option name in camel case.
+
+For example, if you have the following settings in your `bsfmt.json`:
 
 ```json
 {
-  "terraformStrictError": false
+  "keywordCase": "lower",
+  "indentSpaceCount": 2
 }
 ```
 
-By default, the formatter will shell out to your local terraform installation. It will treat status code `2` as a syntax error, and any other status code as a failure to launch terraform, which it will ignore. You can change this option to `true` to treat all non-zero exit codes as a failure.
+You would instead add this to your `.prettierrc.js`:
 
-> *WARNING:* Be careful! By turning on this option, you'll require everyone on your team to install Terraform, even those people that don't normally edit Terraform files (if they happen to resolve merge conflicts locally, for example, and a Terraform file has updated, they could get stuck attempting to run Prettier in a pre-commit hook or similar situation). Only turn this on if you truly want the absence of Terraform to be a failure.
+```json
+{
+  "bsfmtKeywordCase": "lower",
+  "bsfmtIndentSpaceCount": 2
+}
+```
+
+Refer to the [bsfmt.json spec](https://github.com/rokucommunity/brighterscript-formatter#bsfmtjson-options) for the full list of options.
